@@ -1,46 +1,49 @@
 <template>
-  <div class="container" >
-    <h1>Szakkörök</h1>
-    <div class="row justify-content-center">
-        <!-- táblázat -->
-         <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Név</th>
-                    <th>Osztály</th>
-                    <th>Szakkör</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Felsorolás a data-binding segítségével -->
-                <tr v-for="item in users" :key="item.id">
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.class }}</td>
-                    <td>{{ item.studygroupID }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <div class="container">
+      <h2>Tanulók és szakkörök</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Név</th>
+            <th>Osztály</th>
+            <th>Szakkör</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(student, index) in students" :key="index">
+            <td>{{ student.name }}</td>
+            <td>{{ student.class }}</td>
+            <td>
+              <select v-model="student.selectedActivity" class="form-select">
+                <option v-for="activity in activities" :key="activity" :value="activity">
+                  {{ activity }}
+                </option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- <pre>{{ students }}</pre>  -->
   </div>
-</template>
-
-<script>
-export default {
+  </template>
+  
+  <script>
+  export default {
     data() {
-        return {
-            users: [
-                { id: 1, name: 'Kovács Boglárka', class: '12A', studygroupID: null },
-                { id: 2, name: 'Nagy Levente', class: '12B', studygroupID: null },
-                { id: 3, name: 'Szabó Zoltán', class: '13C', studygroupID: null },
-                { id: 4, name: 'Lakatos Levente', class: '13D', studygroupID:null}
-                
-            ]
-        }
-    }
+      return {
+        students: [
+          { name: 'Kiss Péter', class: '10A', selectedActivity: null },
+          { name: 'Nagy Anna', class: '11B', selectedActivity: null },
+          { name: 'Szabó Béla', class: '12C', selectedActivity: null },
+        ],
+        activities: ['Foci', 'Kosárlabda', 'Dráma', 'Nincs szakkör'],
+      };
+    },
+  };
+  </script>
+  
+  <style scoped>
 
-}
-</script>
-
-<style>
-
-</style>
+  </style>
+  
