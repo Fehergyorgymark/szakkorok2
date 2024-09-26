@@ -29,10 +29,10 @@ export default {
     data() {
         return {
             users: [
-                { id: 1, name: 'Kovács Boglárka', class: '12A', studygroupID: 'Robotika' },
-                { id: 2, name: 'Nagy Levente', class: '12B', studygroupID: 'Dráma' },
-                { id: 3, name: 'Szabó Zoltán', class: '13C', studygroupID: 'Természettudományos ' },
-                { id: 4, name: 'Lakatos Levente', class: '13D', studygroupID:'Karate'}
+                { id: 1, name: 'Kovács Boglárka', class: '12A', studygroupID: null },
+                { id: 2, name: 'Nagy Levente', class: '12B', studygroupID: null },
+                { id: 3, name: 'Szabó Zoltán', class: '13C', studygroupID: null },
+                { id: 4, name: 'Lakatos Levente', class: '13D', studygroupID:null}
                 
             ]
         }
