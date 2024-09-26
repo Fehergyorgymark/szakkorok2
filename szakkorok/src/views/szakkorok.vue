@@ -29,9 +29,11 @@ export default {
     data() {
         return {
             users: [
-                { id: 1, name: 'John Doe', class: '1A', studygroupID: '123' },
-                { id: 2, name: 'Jane Doe', class: '2B', studygroupID: '456' },
-                { id: 3, name: 'Mike Doe', class: '3C', studygroupID: '789' }
+                { id: 1, name: 'Kovács Boglárka', class: '12A', studygroupID: 'Robotika' },
+                { id: 2, name: 'Nagy Levente', class: '12B', studygroupID: 'Dráma' },
+                { id: 3, name: 'Szabó Zoltán', class: '13C', studygroupID: 'Természettudományos ' },
+                { id: 4, name: 'Lakatos Levente', class: '13D', studygroupID:'Karate'}
+                
             ]
         }
     }
