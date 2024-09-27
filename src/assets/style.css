@@ -17,7 +17,7 @@ body {
   th, td {
     padding: 10px;
     border: 1px solid #444;
-    color: #f0f0f0;
+    color: #000000;
     background-color: #222;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
@@ -36,24 +36,24 @@ body {
     transition: transform 0.2s;
   }
   
-  tbody tr:hover {
+  /* tbody tr:hover {
     transform: scale(1.05) rotate(1deg);
     animation: shake 0.3s ease-in-out;
   }
-  
-  select.form-select {
-    padding: 5px;
+   */
+   select.form-select {
+    padding: 2px; 
     border-radius: 4px;
     border: 1px solid #555;
     background-color: #222;
     color: #fff;
     transition: all 0.3s ease;
-  }
+}
   
   select.form-select:focus {
     border-color: #fd0202;
     box-shadow: 0 0 5px rgba(253, 2, 2, 0.5);
-    animation: pulse 0.5s infinite;
+    /* animation: pulse 0.5s infinite; */
   }
   
   .activities-box {
@@ -114,7 +114,7 @@ body {
     animation: blink 1s infinite;
   }
   
-  @keyframes fadeIn {
+  /* @keyframes fadeIn {
     from {
       opacity: 0;
       transform: translateY(-10px);
@@ -134,9 +134,9 @@ body {
       transform: translateY(0);
       opacity: 1;
     }
-  }
+  } */
   
-  @keyframes bounceIn {
+  /* @keyframes bounceIn {
     0% {
       transform: scale(0);
     }
@@ -146,7 +146,7 @@ body {
     100% {
       transform: scale(1);
     }
-  }
+  } */
   
   @keyframes fadeInUp {
     from {
@@ -171,7 +171,7 @@ body {
     }
   }
   
-  @keyframes shake {
+  /* @keyframes shake {
     0% {
       transform: translateX(0);
     }
@@ -187,25 +187,25 @@ body {
     100% {
       transform: translateX(0);
     }
-  }
+  } */
   
-  @keyframes swing {
+  /* @keyframes swing {
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(5deg);
     }
-  }
+  } */
   
-  @keyframes blink {
+  /* @keyframes blink {
     0%, 100% {
       opacity: 1;
     }
     50% {
       opacity: 0;
     }
-  }
+  } */
   
   @media (max-width: 768px) {
     .activities-box {
