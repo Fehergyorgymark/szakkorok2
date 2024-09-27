@@ -78,7 +78,7 @@ export default {
   },
   methods: {
     updateActivities() {
-      // Frissítjük a kiválasztott szakkörökre járók listáját
+     
       this.selectedFoci = this.students
         .filter(student => student.activities.foci === 'Jár')
         .map(student => student.name);
@@ -93,7 +93,7 @@ export default {
     },
   },
   mounted() {
-    // Első betöltéskor frissítjük a kiválasztott tanulókat
+    
     this.updateActivities();
   },
 };

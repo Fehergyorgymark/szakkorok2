@@ -5,13 +5,13 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-color: #000; /* Fekete háttér */
-    color: #ff0000; /* Piros szöveg */
+    background-color: #000; 
+    color: #ff0000;
     font-family: 'Arial', sans-serif;
 
 }
 
-/* Táblázat stílus */
+
 table {
     width: 100%;
     margin: 20px 0;
