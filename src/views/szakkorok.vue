@@ -2,6 +2,8 @@
   <div class="container">
     <h2>Tanulók és szakkörök</h2>
 
+    <ThemeSelector @themeChanged="changeTheme" />
+
     <div class="main-container">
       <div class="table-container">
         <table class="table table-bordered">
@@ -18,10 +20,9 @@
               <td>{{ student.class }}</td>
               <td>
                 <select v-model="student.selectedActivity" class="form-select" @change="updateActivities()">
-                  <option v-for="activity in activities" :key="activity.id" 
-                  :value="activity.id">
-                  {{activity.name }}
-                </option>
+                  <option v-for="activity in activities" :key="activity.id" :value="activity.id">
+                    {{ activity.name }}
+                  </option>
                 </select>
               </td>
             </tr>
@@ -30,16 +31,12 @@
       </div>
 
       <div class="activities-box">
-
         <ActivitiesCard
-        v-for="activity in activities" :key="activity.id"
-        :students="students"
-        :activity="activity"
-        
+          v-for="activity in activities"
+          :key="activity.id"
+          :students="students"
+          :activity="activity"
         />
-
-
-        
       </div>
     </div>
   </div>
@@ -47,29 +44,31 @@
 
 <script>
 import ActivitiesCard from '../components/ActivitiesCard.vue';
+import ThemeSelector from '../components/ThemeSelector.vue';
 
 export default {
   components: {
     ActivitiesCard,
+    ThemeSelector,
   },
   data() {
     return {
       students: [
-        { studentID: 1, name: 'Kiss Péter', class: '10A', selectedActivity: 4},
-        { studentID: 2, name: 'Nagy Anna', class: '11B', selectedActivity: 4},
-        { studentID: 3, name: 'Szabó Béla', class: '12C', selectedActivity: 4},
-        { studentID: 4, name: 'Tóth Eszter', class: '10D', selectedActivity: 4},
-        { studentID: 5, name: 'Horváth Gábor', class: '11A', selectedActivity: 4},
-        { studentID: 6, name: 'Kovács Lívia', class: '12B', selectedActivity: 4},
-        { studentID: 7, name: 'Varga Zoltán', class: '10C', selectedActivity: 4},
-        { studentID: 8, name: 'Farkas Réka', class: '11D', selectedActivity: 4},
-        { studentID: 9, name: 'Papp Máté', class: '12A', selectedActivity:  4},
-        { studentID: 10, name: 'Molnár Katalin', class: '10B', selectedActivity: 4},
-        { studentID: 11, name: 'Szalay András', class: '11C', selectedActivity: 4},
-        { studentID: 12, name: 'Balogh Júlia', class: '12D', selectedActivity: 4},
-        { studentID: 13, name: 'Kis István', class: '10A', selectedActivity: 4},
+        { studentID: 1, name: 'Kiss Péter', class: '10A', selectedActivity: 4 },
+        { studentID: 2, name: 'Nagy Anna', class: '11B', selectedActivity: 4 },
+        { studentID: 3, name: 'Szabó Béla', class: '12C', selectedActivity: 4 },
+        { studentID: 4, name: 'Tóth Eszter', class: '10D', selectedActivity: 4 },
+        { studentID: 5, name: 'Horváth Gábor', class: '11A', selectedActivity: 4 },
+        { studentID: 6, name: 'Kovács Lívia', class: '12B', selectedActivity: 4 },
+        { studentID: 7, name: 'Varga Zoltán', class: '10C', selectedActivity: 4 },
+        { studentID: 8, name: 'Farkas Réka', class: '11D', selectedActivity: 4 },
+        { studentID: 9, name: 'Papp Máté', class: '12A', selectedActivity: 4 },
+        { studentID: 10, name: 'Molnár Katalin', class: '10B', selectedActivity: 4 },
+        { studentID: 11, name: 'Szalay András', class: '11C', selectedActivity: 4 },
+        { studentID: 12, name: 'Balogh Júlia', class: '12D', selectedActivity: 4 },
+        { studentID: 13, name: 'Kis István', class: '10A', selectedActivity: 4 },
         { studentID: 14, name: 'Németh Orsolya', class: '11B', selectedActivity: 4 },
-        { studentID: 15, name: 'Fodor Dániel', class: '12C', selectedActivity: 4},
+        { studentID: 15, name: 'Fodor Dániel', class: '12C', selectedActivity: 4 },
       ],
       activities: [
         { id: 1, name: 'Foci' },
@@ -85,10 +84,16 @@ export default {
     },
   },
   methods: {
-    getStudentsByActivity(activitiesname) {
-      return this.students.filter(student => student.selectedActivity.name === activitiesname);
+    changeTheme(theme) {
+      document.body.className = theme; // Téma beállítása
+      document.body.classList.remove('dark-theme', 'light-theme', 'blue-theme', 'green-theme', 'red-theme', 'yellow-theme', 'purple-theme');
+      document.body.classList.add(`${theme}-theme`);
+    },
+    getStudentsByActivity(activityName) {
+      return this.students.filter(student => student.selectedActivity.name === activityName);
     },
     updateActivities() {
+      // frissítési logika
     },
   },
 };

@@ -1,0 +1,139 @@
+/* Alap stílusok */
+body {
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Sötét Téma */
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-theme .table {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .activities-box {
+    background-color: #2e2e2e;
+}
+
+.dark-theme .form-select {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Világos Téma */
+.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme .table {
+    background-color: #f5f5f5;
+}
+
+.light-theme .activities-box {
+    background-color: #eaeaea;
+}
+
+.light-theme .form-select {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Kék Téma */
+.blue-theme {
+    background-color: #0d47a1;
+    color: #ffffff;
+}
+
+.blue-theme .table {
+    background-color: #1976d2;
+}
+
+.blue-theme .activities-box {
+    background-color: #42a5f5;
+}
+
+.blue-theme .form-select {
+    background-color: #bbdefb;
+    color: #000;
+}
+
+/* Zöld Téma */
+.green-theme {
+    background-color: #1b5e20;
+    color: #ffffff;
+}
+
+.green-theme .table {
+    background-color: #388e3c;
+}
+
+.green-theme .activities-box {
+    background-color: #4caf50;
+}
+
+.green-theme .form-select {
+    background-color: #c8e6c9;
+    color: #000;
+}
+
+/* Piros Téma */
+.red-theme {
+    background-color: #b71c1c;
+    color: #ffffff;
+}
+
+.red-theme .table {
+    background-color: #c62828;
+}
+
+.red-theme .activities-box {
+    background-color: #d32f2f;
+}
+
+.red-theme .form-select {
+    background-color: #ffcdd2;
+    color: #000;
+}
+
+/* Sárga Téma */
+.yellow-theme {
+    background-color: #f57f17;
+    color: #000000;
+}
+
+.yellow-theme .table {
+    background-color: #ffb300;
+}
+
+.yellow-theme .activities-box {
+    background-color: #ffd54f;
+}
+
+.yellow-theme .form-select {
+    background-color: #fff9c4;
+    color: #000;
+}
+
+/* Lila Téma */
+.purple-theme {
+    background-color: #4a148c;
+    color: #ffffff;
+}
+
+.purple-theme .table {
+    background-color: #6a1b9a;
+}
+
+.purple-theme .activities-box {
+    background-color: #ab47bc;
+}
+
+.purple-theme .form-select {
+    background-color: #e1bee7;
+    color: #000;
+}

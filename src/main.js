@@ -11,6 +11,8 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 // Saját CSS importálása
 import './assets/main.css'; // A CSS fájl importálása
 
+
+
 const app = createApp(App);
 
 app.use(router);
