@@ -103,7 +103,7 @@ export default {
 
 .table-container {
   flex: 1;
-  max-height: 700px;
+  max-height: 780px;
   overflow-y: auto;
   overflow-x: hidden;
   margin-right: 20px; 
@@ -122,7 +122,7 @@ export default {
 }
 
 .scrollable-list {
-  max-height: flex;
+  max-height: auto;
   overflow-y: auto;
   overflow-x: hidden;
   list-style-type: none;
