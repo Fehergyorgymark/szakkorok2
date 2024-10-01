@@ -2,12 +2,12 @@ body {
     background-color: #000;
     font-family: 'Arial', sans-serif;
     color: #f0f0f0;
-    overflow: hidden;
+    overflow-y: auto;
   }
   
   table {
     width: 100%;
-    margin: 20px 0;
+    margin: 10%;
     border-collapse: collapse;
     text-align: left;
     background-color: #000;
@@ -53,27 +53,20 @@ body {
   select.form-select:focus {
     border-color: #fd0202;
     box-shadow: 0 0 5px rgba(253, 2, 2, 0.5);
-    /* animation: pulse 0.5s infinite; */
-  }
-  
-  .activities-box {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    animation: fadeIn 1s ease-in-out;
   }
   
   .activity {
     background-color: rgba(34, 34, 34, 0.9);
+    margin-top: 10px;
     border: 1px solid #555;
-    border-radius: 8px;
-    padding: 20px;
-    width: 30%;
+    border-radius: 18px;
+    padding: 1px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
     opacity: 0;
-    transform: translateY(20px);
     animation: fadeInUp 0.5s ease forwards, swing 1s infinite alternate;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .activity:hover {
